@@ -1,21 +1,16 @@
 {
-  "name": "site",
-  "version": "1.0.0",
-  "description": "The KUDO website is built with [Hugo](https://gohugo.io).",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^1.2.0",
-    "autoprefixer": "^9.6.0",
-    "postcss": "^7.0.17",
-    "postcss-cli": "^6.1.2",
-    "postcss-import": "^12.0.1",
-    "postcss-nesting": "^7.0.0",
-    "tailwindcss": "^1.0.4"
+    "vuepress": "^1.0.2"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev content",
+    "docs:build": "rm -rf docs/.vuepress/dist/ && rm -rf node_modules && yarn install && vuepress build content",
+    "docs:clean": "rm -rf node_modules && yarn install"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "markdown-it-footnote": "^3.0.2",
+    "vuepress-plugin-container": "^2.0.2"
   }
 }
