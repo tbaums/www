@@ -1,16 +1,15 @@
 ---
 title: Events
-type: community
-menu: "community"
 ---
 
-## Learn more about KUDO at an event near you
-<br></br>
-### Upcoming Events
+# KUDO Community Events
 
-{{< yamlEventsUpcoming >}}
-<br></br>
+Learn more about KUDO at an event near you: 
 
-### Past Events
+## Upcoming Events
 
-{{< yamlEventsPast >}}
+<EventsFromPages subset="upcoming"/>
+
+## Past Events
+
+<EventsFromPages subset="past"/>

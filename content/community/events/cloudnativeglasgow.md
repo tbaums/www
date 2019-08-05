@@ -1,0 +1,12 @@
+---
+event: Cloud Native Glasgow
+topic: KUDO - Kubernetes Operators, the easy way
+speaker: Matt Jarvis
+date: 2019-09-03
+location: Glasgow, Scotland
+url: 
+---
+
+<!-- some more info about the event could go here -->
+
+<!-- more -->
