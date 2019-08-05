@@ -1,7 +1,11 @@
 ---
 title: Announcing KUDO 0.3.0
 date: 2019-06-28
+description:
+    We are proud to announce the release of KUDO v0.3.0!
 ---
+
+# Announcing KUDO 0.3.0
 
 We are proud to announce the release of KUDO v0.3.0! This release introduces a new package format, a package repository, and introduces a test harness to help with end-to-end testing. It also deprecates the term "Framework" in favor of "Operator".
 
@@ -73,4 +77,4 @@ To see the full changelog and the list of contributors who contribued to this re
 
 Now that KUDO v0.3.0 has shipped, the team will begin planning and executing on v0.4.0. The focus of v0.4.0 is to provide operator extensions to provide KUDO's sequencing logic to formats including Helm Charts and [CNAB](https://cnab.io) bundles. v0.4.0 will also focus on the operator release process for operators being released into the repository.
 
-[Get started](/docs/getting-started) with KUDO today. Our [community](/docs/community) is ready for feedback to make KUDO even better!
+[Get started](/docs/) with KUDO today. Our [community](/community/) is ready for feedback to make KUDO even better!

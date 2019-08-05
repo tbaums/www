@@ -1,7 +1,11 @@
 ---
 title: Announcing KUDO 0.2.0
 date: 2019-06-07
+description:
+    We are proud to announce the release of KUDO v0.2.0!
 ---
+
+# Announcing KUDO 0.2.0
 
 We are proud to announce the release of KUDO v0.2.0! This release focuses on core infrastructure inside of KUDO as the format for developing operators and running operators stabilizes.
 
@@ -15,15 +19,16 @@ We are proud to announce the release of KUDO v0.2.0! This release focuses on cor
 
 KUDO has switched to Go Templating with Sprig for templates. All Mustache templates should be replaced to their corresponding Go templates. The following keywords are available:
 
-- `{{ .Name }}` - Name of the instance
-- `{{ .Namespace }}` - Namespace the instance is located in
-- `{{ .OperatorName }}` - Name of the operator
-- `{{ .PlanName }}` - Name of the plan being run
-- `{{ .PhaseName }}` - Name of the phase being run
-- `{{ .StepName }}` - Name of the step being run
-- `{{ .StepNumber }}` - Number of the step being run
+<!-- sdf -->
+- <code v-pre>{{ .Name }}</code> - Name of the instance
+- <code v-pre>{{ .Namespace }}</code> - Namespace the instance is located in
+- <code v-pre>{{ .OperatorName }}</code> - Name of the operator
+- <code v-pre>{{ .PlanName }}</code> - Name of the plan being run
+- <code v-pre>{{ .PhaseName }}</code> - Name of the phase being run
+- <code v-pre>{{ .StepName }}</code> - Name of the step being run
+- <code v-pre>{{ .StepNumber }}</code> - Number of the step being run
 
-Additionally, all parameters are now nested under `{{ .Params }}` in templates. For example, the Username parameter would be available as `{{ .Params.Username }}`.
+Additionally, all parameters are now nested under <code v-pre>{{ .Params }}</code> in templates. For example, the Username parameter would be available as <code v-pre>{{ .Params.Username }}</code>.
 
 KUDO has made the [Sprig](https://github.com/Masterminds/sprig) function library available in templates. This gives a wide range of functions available to operator developers. For safety, KUDO disables functions related to the environment and filesystem inside the manager container. In this release, this includes: `env`, `expandenv`, `base`, `dir`, `clean`, `ext`, `isAbs`.
 
@@ -37,7 +42,7 @@ KUDO now uses GCS for the registry. This removes the need for `.git-credentials`
 
 The KUDO Install CLI now uses a new syntax for setting parameters. To set a parameter, use:
 
-```
+```bash
 kubectl kudo install kafka -p cpus=3
 ```
 
@@ -47,7 +52,7 @@ This is more consistent with tooling such as Helm.
 
 A Homebrew tap is now available for the KUDO kubectl Plugin. To use it, simply tap the repo and install:
 
-```
+```bash
 $ brew tap kudobuilder/tap
 $ brew install kudo-cli
 ```
@@ -66,4 +71,4 @@ To see the full changelog and the list of contributors who contribued to this re
 
 Now that KUDO v0.2.0 has shipped, the team will begin planning and executing on v0.3.0. The focus of v0.3.0 is to stabilize the packaging format for operator developers, as well as operator extensions to provide KUDO's sequencing logic to formats including Helm Charts and [CNAB](https://cnab.io) bundles.
 
-[Get started](/docs/getting-started) with KUDO today. Our [community](/docs/community) is ready for feedback to make KUDO even better!
+[Get started](../docs/) with KUDO today. Our [community](/community/) is ready for feedback to make KUDO even better!
