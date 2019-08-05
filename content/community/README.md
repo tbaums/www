@@ -1,10 +1,7 @@
 ---
-title: Get Involved !
-weight: 1
-type: community
-menu: "community"
-aliases: ["/community/"]
 ---
+
+# Get Involved!
 
 ## Online Community Meetings
 

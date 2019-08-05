@@ -1,15 +1,8 @@
----
-title: Comparison
-menu: docs
----
-# Comparison to other App Def templates
-
+# Comparison
 
 ##  KUDO
 
- KUDO focuses on multi-step (plan) applications that require the order to be specific to function
-
-
+KUDO focuses on multi-step (plan) applications that require the order to be specific to function
 
 Developer Focused Vs App Operator Focused
 Developer focused tools have great use case in sync-ing code with runtime for testing.  App Operators focus on Application packaging for reusability/transparency/upgradability/application lifecycle management

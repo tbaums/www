@@ -5,13 +5,13 @@ type: docs
 
 # Apache Zookeeper
 
-Create a `Operator` object for Zookeeper
+Create an `Operator` object for Zookeeper
 ```bash
 $ kubectl apply -f config/samples/zookeeper-operator.yaml
 operator.kudo.dev "zookeeper" created
 ```
 
-Create a `OperatorVersion` for the Zookeeper  `Operator`
+Create an `OperatorVersion` for the Zookeeper `Operator`
 
 ```bash
 $ kubectl apply -f config/samples/zookeeper-operatorversion.yaml

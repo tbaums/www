@@ -1,8 +1,4 @@
----
-title: Developing operators
-type: docs
-menu: docs
----
+# Developing operators
 
 This guide will provide introduction to creating KUDO operators, you will learn about the structure of the package and the template language to use.
 
@@ -10,7 +6,8 @@ This guide will provide introduction to creating KUDO operators, you will learn 
 In this section we’ll start by developing your first operator and we’ll follow up with in-depth explanation of the underlying concepts.
 
 The overall structure of a package looks following:
-```shell
+
+```
 .
 ├── operator.yaml
 ├── params.yaml
@@ -72,7 +69,7 @@ spec:
             - containerPort: 80
 ```
 
-This looks like pretty normal kubernetes yaml defining deployment and you’re right. But you can already see the KUDO templating language in action on the line referencing `{{ .Params.Replicas }}`. This will get substituted during installation by merging what is in `params.yaml` and overrides defined before install. So let’s define the last missing piece, `params.yaml`.
+This looks like pretty normal kubernetes yaml defining deployment and you’re right. But you can already see the KUDO templating language in action on the line referencing `.Params.Replicas`. This will get substituted during installation by merging what is in `params.yaml` and overrides defined before install. So let’s define the last missing piece, `params.yaml`.
 
 ```yaml
 replicas:
@@ -115,12 +112,12 @@ Everything that is placed into the templates folder is treated as template and p
 
 ### Variables provided by KUDO
 
-- `{{ .OperatorName }}` - name of the operator the template belongs to
-- `{{ .Name }}` - name of the instance that kubernetes object created from this template will belong to
-- `{{ .Namespace }}` - namespace in which the instance lives
-- `{{ .Params }}` - object containing list of parameters you defined in `params.yaml` with overrides provided during installation
+- `.OperatorName` - name of the operator the template belongs to
+- `.Name` - name of the instance that kubernetes object created from this template will belong to
+- `.Namespace` - namespace in which the instance lives
+- `.Params` - object containing list of parameters you defined in `params.yaml` with overrides provided during installation
 
-An more complex example using some of the built in variables could look as the following `templates/service.yaml`
+A more complex example using some of the built in variables could look as the following `templates/service.yaml`
 
 ```yaml
 apiVersion: v1
@@ -146,4 +143,3 @@ spec:
     app: kafka
     instance: {{ .Name }}
 ```
-

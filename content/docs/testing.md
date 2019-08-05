@@ -8,18 +8,9 @@ menu: docs
 
 KUDO uses a declarative integration testing harness for testing itself and Operators built on it. Test cases are written as plain Kubernetes resources and can be run against any Kubernetes cluster - allowing testing of Operators, KUDO, and any other Kubernetes resources or controllers.
 
-## Table of Contents
+<h2>Table of Contents</h2>
 
-* [Test harness usage](#test-harness-usage)
-   * [Run the Operator tests](#run-the-operator-tests)
-* [Writing test cases](#writing-test-cases)
-   * [Test case directory structure](#test-case-directory-structure)
-   * [Test steps](#test-steps)
-     * [Deleting resources](#deleting-resources)
-     * [Test assertions](#test-assertions)
-       * [Listing objects](#listing-objects)
-       * [Advanced test assertions](#advanced-test-assertions)
-* [Further Reading](#further-reading)
+[[toc]]
 
 ## Test harness usage
 
@@ -27,7 +18,7 @@ The Operator test suite is written and run by Operator developers and CI to test
 
 First, clone the [Operators repository](https://github.com/kudobuilder/operators):
 
-```
+```bash
 git clone https://github.com/kudobuilder/operators.git
 cd operators
 ```
@@ -38,19 +29,19 @@ Make sure that you have the latest version of kudoctl installed.
 
 To run the Operator test suite, run the following in the [Operators repository](https://github.com/kudobuilder/operators):
 
-```
+```bash
 kubectl kudo test
 ```
 
 To run against a production Kubernetes cluster, run:
 
-```
+```bash
 kubectl kudo test --start-kind=false
 ```
 
 Operator test suites are stored in the `tests` subdirectory of each [Operator](https://github.com/kudobuilder/operators/tree/master/repository), e.g.:
 
-```
+```bash
 ./repository/zookeeper/tests/
 ./repository/mysql/tests/
 ```
@@ -68,7 +59,7 @@ To write a test case:
 
 Given the above Zookeeper test case called `upgrade-test`, an example test case directory structure with two test steps might look like:
 
-```
+```bash
 ./repository/zookeeper/tests/upgrade-test/00-instance.yaml
 ./repository/zookeeper/tests/upgrade-test/00-configmap.yaml
 ./repository/zookeeper/tests/upgrade-test/00-assert.yaml
@@ -90,7 +81,7 @@ The test step files can contain any number of Kubernetes resources that should b
 
 Continuing with the upgrade-test example, create `00-instance.yaml`:
 
-```
+```yaml
 apiVersion: kudo.dev/v1alpha1
 kind: Instance
 metadata:
@@ -111,7 +102,7 @@ This test step will create a Zookeeper `Instance`. The namespace should not be s
 
 It is possible to delete existing resources at the beginning of a test step. Create a `TestStep` object in your step to configure it:
 
-```
+```yaml
 apiVersion: kudo.dev/v1alpha1
 kind: TestStep
 delete:
@@ -136,7 +127,7 @@ Test assert files contain any number of Kubernetes resources that are expected t
 
 Continuing with the `upgrade-test` example, create `00-instance.yaml`:
 
-```
+```yaml
 apiVersion: kudo.dev/v1alpha1
 kind: Instance
 metadata:
@@ -163,11 +154,11 @@ status:
 
 This watches an `Instance` called `zk` to have its status set to `COMPLETE` and it expects a `StatefulSet` to also be created called `zk-zk` and it waits for all `Pods` in the `StatefulSet` to be ready.
 
-##### Listing objects
+#### Listing objects
 
 If the object `name` is omitted from the object metadata, it is possible to list objects and verify that one of them matches the desired state. This can be useful, for example, to check the `Pods` created by a `Deployment`.
 
-```
+```yaml
 apiVersion: v1
 kind: Pod
 metadata:
@@ -179,11 +170,11 @@ status:
 
 This would verify that a pod with the `app=nginx` label is running.
 
-##### Advanced test assertions
+#### Advanced test assertions
 
 The test harness recognizes special `TestAssert` objects defined in the assert file. If present, they override default settings of the test assert.
 
-```
+```yaml
 apiVersion: kudo.dev/v1alpha1
 kind: TestAssert
 timeout: 120

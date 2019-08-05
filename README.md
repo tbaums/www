@@ -1,6 +1,6 @@
 # KUDO Website
 
-The KUDO website is built with [Hugo](https://gohugo.io).
+~The KUDO website is built with [Hugo](https://gohugo.io).~
 
 ## Development
 

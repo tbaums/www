@@ -11,13 +11,13 @@ Kafka depends on Zookeeper so we need to run it first. Follow the [Zookeeper exa
 
 ## Run Kafka
 
-Create a `Operator` object for Kafka
+Create an `Operator` object for Kafka
 ```bash
 $ kubectl apply -f config/samples/kafka-operator.yaml
 operator.kudo.dev "kafka" created
 ```
 
-Create a `OperatorVersion` for the Kafka  `Operator`
+Create an `OperatorVersion` for the Kafka `Operator`
 
 ```bash
 $ kubectl apply -f config/samples/kafka-operatorversion.yaml

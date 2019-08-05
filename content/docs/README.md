@@ -1,11 +1,3 @@
----
-title: Getting Started
-type: docs
-weight: 1
-menu: "docs"
-aliases: ["/docs/"]
----
-
 # Getting Started
 
 ## Pre-requisites
@@ -17,11 +9,13 @@ Before you get started:
 
 ## Install KUDO into your cluster
 
-- `kubectl create -f https://raw.githubusercontent.com/kudobuilder/kudo/v0.3.3/docs/deployment/00-prereqs.yaml`
-- `kubectl create -f https://raw.githubusercontent.com/kudobuilder/kudo/v0.3.3/docs/deployment/10-crds.yaml`
-- `kubectl create -f https://raw.githubusercontent.com/kudobuilder/kudo/v0.3.3/docs/deployment/20-deployment.yaml`
+```bash
+kubectl create -f https://raw.githubusercontent.com/kudobuilder/kudo/v0.3.3/docs/deployment/00-prereqs.yaml
+kubectl create -f https://raw.githubusercontent.com/kudobuilder/kudo/v0.3.3/docs/deployment/10-crds.yaml
+kubectl create -f https://raw.githubusercontent.com/kudobuilder/kudo/v0.3.3/docs/deployment/20-deployment.yaml
+```
 
-If you want to use the KUDO kubectl plugin, you can now follow the [CLI plugin installation instructions](https://kudo.dev/docs/cli/).
+If you want to use the KUDO kubectl plugin, you can now follow the [CLI plugin installation instructions](/docs/cli/).
 
 ### Notes on Minikube
 
