@@ -1,0 +1,76 @@
+{
+  "events": [
+    {
+      "event": "Cloud Native Bulgaria",
+      "topic": "KUDO - Kubernetes Operators, the easy way",
+      "speaker": "Matt Jarvis",
+      "date": "2019-07-18",
+      "location": "Sofia, Bulgaria",
+      "url": "https://www.meetup.com/Cloud-Native-Computing-Bulgaria/events/262573664/"
+    },
+    {
+      "event": "Cloud Native Glasgow",
+      "topic": "KUDO - Kubernetes Operators, the easy way",
+      "speaker": "Matt Jarvis",
+      "date": "2019-09-03",
+      "location": "Glasgow, Scotland",
+      "url": ""
+    },
+    {
+      "event": "Cloud Native London 2019",
+      "topic": "KUDO - Kubernetes Operators, the easy way",
+      "speaker": "Matt Jarvis",
+      "date": "2019-09-25",
+      "location": "London, UK",
+      "url": "https://skillsmatter.com/conferences/11723-cloudnative-london-2019#program"
+    },
+    {
+      "event": "Cloud Native London Meetup",
+      "topic": "KUDO - Kubernetes Operators, the easy way",
+      "speaker": "Matt Jarvis",
+      "date": "2019-12-04",
+      "location": "London, UK",
+      "url": ""
+    },
+    {
+      "event": "Cloud Native Madrid",
+      "topic": "KUDO - Kubernetes Operators, the easy way",
+      "speaker": "Nick Jones",
+      "date": "2019-07-09",
+      "location": "Madrid, Spain",
+      "url": "https://www.meetup.com/Cloud-Native-Madrid/events/262410811/"
+    },
+    {
+      "event": "Cloud Native Paris",
+      "topic": "KUDO - Kubernetes Operators, the easy way",
+      "speaker": "Denis Jannot",
+      "date": "2019-10-17",
+      "location": "Paris, France",
+      "url": ""
+    },
+    {
+      "event": "Cloud Native and Kubernetes Warsaw",
+      "topic": "Building Kubernetes Operators with KUDO - Experiences from Building the ArangoDB Operator",
+      "speaker": "Jörg Schad",
+      "date": "2019-06-27",
+      "location": "Warsaw, Poland",
+      "url": "https://www.meetup.com/Cloud-Native-Kubernetes-Warsaw/events/260639500"
+    },
+    {
+      "event": "DevOps STL",
+      "topic": "Smooth Operator",
+      "speaker": "Ken Sipe",
+      "date": "2019-06-27",
+      "location": "St Louis, US",
+      "url": "https://www.meetup.com/DevOps-STL/events/262204805/"
+    },
+    {
+      "event": "Kubernetes Edinburgh",
+      "topic": "KUDO - Kubernetes Operators, the easy way",
+      "speaker": "Matt Jarvis",
+      "date": "2019-07-30",
+      "location": "Edinburgh, Scotland",
+      "url": "https://www.meetup.com/Kubernetes-Edinburgh/events/263060075/"
+    }
+  ]
+}
